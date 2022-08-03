@@ -7,20 +7,77 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%- title %></title>
   <link rel="stylesheet" href="./assets/style/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
-  <header class="header">
-    這是 header
-  </header>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <a href="#">
+          <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/logo-white.png" alt="">
+        </a>
+        <div class="header-item">
+          <ul>
+            <li><a href="#">系列鏡框</a></li>
+            <li><a href="#">門市據點</a></li>
+            <li><a href="#">部落格</a></li>
+            <li><a href="#">常見問題</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars white"></i>
+      </div>
+      <div class="header-body">
+      <div class="headerRwd">
+        <div class="item"><a href="#">系列鏡框</a></div>
+        <div class="item"><a href="#">門市據點</a></div>
+        <div class="item"><a href="#">部落格</a></div>
+        <div class="item"><a href="#">常見問題</a></div>
+      </div>
+      </div>
+    </header>
 
-  <%- contents %>
-
+    <%- contents %>
+  </div>
   <footer class="footer">
-    footer
+    <div class="container">
+      <div class="footer-item">
+        <ul class="footer-nav">
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">系列鏡框</a></li>
+          <li><a href="#">門市據點</a></li>
+          <li><a href="#">部落格</a></li>
+          <li><a href="#">常見問題</a></li>
+        </ul>
+        <ul class="footer-logo">
+          <li><a href=""><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/ic-social-fb.png" alt=""></a></li>
+          <li><a href=""><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/ic_social_ig.png" alt=""></a></li>
+          <li><a href=""><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/ic_social_line.png" alt=""></a></li>
+        </ul>
+      </div>
+      <h3 class="white phone"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;0800-000-000</h3>
+      <h3 class="white email"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;glasses@business.com</h3>
+      <div class="border"></div>
+      <div class="privacy">
+        <p class="white">Copyright © 2020 Glasses.All rights reserved.</p>
+        <ul class="privacy-item">
+          <li><a href="#">隱私權政策</a></li>
+          <li><a href="#">服務條款</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
 </body>
-
+<script>
+  $(document).ready(function(){
+	$(".fa-bars").click(function(){
+		$(".header-body").toggle();
+	});
+});
+</script>
 </html>
